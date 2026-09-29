@@ -33,7 +33,7 @@ function ProjectCard({ img, title, description, technologies, github, demo }) {
 				)}
 				{demo && (
 					<Button asChild>
-						<a href={demo}>Demo</a>
+						<a href={demo}>Live</a>
 					</Button>
 				)}
 			</CardFooter>
