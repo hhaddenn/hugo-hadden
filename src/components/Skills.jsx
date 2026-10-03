@@ -8,12 +8,7 @@ function Skills() {
 		},
 		{
 			title: 'Backend & APIs',
-			items: [
-				'Python',
-				'Django',
-				'Django REST Framework',
-				'REST APIs',
-			],
+			items: ['Python', 'Django', 'Django REST Framework', 'REST APIs'],
 		},
 		{
 			title: 'Data & Background Tasks',
@@ -21,7 +16,7 @@ function Skills() {
 		},
 		{
 			title: 'DevOps & Deployment',
-			items: ['Docker', 'Komodo', 'Git'],
+			items: ['Docker', 'Komodo', 'Git', 'GitHub Actions', 'CI/CD'],
 		},
 	];
 
