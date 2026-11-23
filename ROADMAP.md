@@ -5,13 +5,20 @@
 ### Atualizar a secção Projects
 
 - [ ] Confirmar que os repos do ticktask e do pawtrait são públicos (se não forem, `github: null`)
-- [ ] Acrescentar um campo `status` aos projetos (`'done'` / `'in-progress'`)
-- [ ] No `ProjectCard`, mostrar um badge "In progress" só quando `status === 'in-progress'`
-- [ ] Adicionar o Ticktask (React, Django, PostgreSQL, Docker)
-- [ ] Adicionar o Pawtrait (React, Vite, Tailwind, Canvas API)
-- [ ] Tirar o card placeholder "Recipe App": o whisk-taker e o stitch-happens só entram quando tiverem algo para mostrar
+- [x] Acrescentar um campo `status` aos projetos (`'done'` / `'in-progress'`)
+- [x] No `ProjectCard`, mostrar um badge "In progress" só quando `status === 'in-progress'`
+- [x] Adicionar o Ticktask (React, Django, PostgreSQL, Docker)
+- [x] Adicionar o Pawtrait (React, Vite, Tailwind, Canvas API)
+- [x] Tirar o card placeholder "Recipe App": o whisk-taker e o stitch-happens só entram quando tiverem algo para mostrar
 - [ ] Screenshots reais em `src/assets/` para substituir o placeholder (o Pawtrait a meio do desenho dá uma boa imagem)
-- [ ] Testar com `npm run dev` e `npm run lint`
+- [x] Testar com `npm run dev` e `npm run lint`
+
+### Corrigir os erros antigos do lint
+
+- [ ] `vite.config.js`: `'process' is not defined` (falta o ambiente Node na config do ESLint para este ficheiro)
+- [ ] `ui/card.jsx`: import do `React` por usar
+- [ ] `ui/badge.jsx` e `ui/button.jsx`: aviso do `react-refresh/only-export-components` (código gerado pelo shadcn: decidir se se corrige ou se se desliga a regra para `src/components/ui/`)
+- [ ] Fazer num commit à parte e confirmar que `npm run lint` passa sem erros
 
 ### Deploy no Cloudflare Pages (sair da Raspberry)
 
