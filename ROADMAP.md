@@ -24,10 +24,10 @@
 
 Objetivo: cada push para `main` publica o site sozinho, sem entrar na Raspberry.
 
-- [ ] Confirmar que `npm run build` e `npm run preview` funcionam localmente (é o que o Pages vai correr)
-- [ ] Cloudflare dashboard → Workers & Pages → criar projeto Pages → ligar ao repo `hugo-hadden` do GitHub
-- [ ] Configuração do build: preset Vite (ou React (Vite)), build command `npm run build`, output `dist`, production branch `main`
-- [ ] Variável de ambiente `NODE_VERSION` com uma versão suportada pelo Vite 8 (ver os requisitos de Node na doc do Vite)
+- [x] Confirmar que `npm run build` e `npm run preview` funcionam localmente (é o que o Pages vai correr)
+- [x] Cloudflare dashboard → Workers & Pages → criar projeto Pages → ligar ao repo `hugo-hadden` do GitHub
+- [x] Configuração do build: preset Vite (ou React (Vite)), build command `npm run build`, output `dist`, production branch `main`
+- [x] Variável de ambiente `NODE_VERSION` com uma versão suportada pelo Vite 8 (ver os requisitos de Node na doc do Vite)
 - [ ] Primeiro deploy: testar o site no URL `*.pages.dev` (secções, imagens, links, favicon, modo escuro)
 - [ ] Abrir uma branch de teste e ver o URL de preview que o Pages cria para ela
 - [ ] Custom domain: adicionar `hugo-hadden.com` (e `www`, se o usares) ao projeto Pages
@@ -37,7 +37,9 @@ Objetivo: cada push para `main` publica o site sozinho, sem entrar na Raspberry.
 - [ ] Na Raspberry (última vez!): tirar a ingress do `hugo-hadden.com` do tunnel e parar/remover o que servia o portfolio
 - [ ] Atualizar o README com o link do site e uma linha sobre o deploy
 
-Notas: o Pages serve o site na raiz do domínio, por isso não é preciso mexer no `base` do Vite. Não há router, por isso também não é preciso regra de fallback para SPA.
+Notas: a Cloudflare já chama ao Pages "legacy Pages workflow" e empurra para os Workers com static assets. Por agora o Pages funciona; mais tarde, avaliar a migração para Workers (precisa de um `wrangler.jsonc` no repo).
+
+O Pages serve o site na raiz do domínio, por isso não é preciso mexer no `base` do Vite. Não há router, por isso também não é preciso regra de fallback para SPA.
 
 ### Botão de download do CV
 
