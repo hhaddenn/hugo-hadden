@@ -30,11 +30,12 @@ Objetivo: cada push para `main` publica o site sozinho, sem entrar na Raspberry.
 - [x] Variável de ambiente `NODE_VERSION` com uma versão suportada pelo Vite 8 (ver os requisitos de Node na doc do Vite)
 - [ ] Primeiro deploy: testar o site no URL `*.pages.dev` (secções, imagens, links, favicon, modo escuro)
 - [ ] Abrir uma branch de teste e ver o URL de preview que o Pages cria para ela
-- [ ] Custom domain: adicionar `hugo-hadden.com` (e `www`, se o usares) ao projeto Pages
+- [x] Custom domain: adicionar `hugo-hadden.com` (e `www`, se o usares) ao projeto Pages
     - Se já existir um registo DNS para esse nome (ex: o CNAME do tunnel), o Pages pode pedir para o removeres primeiro. Fazer numa hora calma: o site pode ficar uns minutos em baixo
     - Não mexer nos registos de `finance.` e `financeapi.`, que continuam a apontar para a Raspberry
-- [ ] Confirmar que `https://hugo-hadden.com` serve a versão do Pages (HTTPS ok, sem avisos)
-- [ ] Na Raspberry (última vez!): tirar a ingress do `hugo-hadden.com` do tunnel e parar/remover o que servia o portfolio
+- [x] Confirmar que `https://hugo-hadden.com` serve a versão do Pages (HTTPS ok, sem avisos)
+- [x] Tirar o `hugo-hadden.com` e o `www` do tunnel `rasp_pi_tunnel` (feito no dashboard; serviam `http://localhost:4173`, o `vite preview`)
+- [ ] Parar/remover na Raspberry o que servia o portfolio na porta 4173 (pelo Komodo, se estiver lá)
 - [ ] Atualizar o README com o link do site e uma linha sobre o deploy
 
 Notas: a Cloudflare já chama ao Pages "legacy Pages workflow" e empurra para os Workers com static assets. Por agora o Pages funciona; mais tarde, avaliar a migração para Workers (precisa de um `wrangler.jsonc` no repo).
