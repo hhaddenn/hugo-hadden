@@ -1,5 +1,6 @@
 import {
 	Card,
+	CardAction,
 	CardHeader,
 	CardTitle,
 	CardDescription,
@@ -9,7 +10,15 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-function ProjectCard({ img, title, description, technologies, github, demo }) {
+function ProjectCard({
+	img,
+	title,
+	description,
+	status,
+	technologies,
+	github,
+	demo,
+}) {
 	return (
 		<Card className={"flex flex-col gap-4"}>
 			<img
@@ -21,6 +30,12 @@ function ProjectCard({ img, title, description, technologies, github, demo }) {
 			<CardHeader>
 				<CardTitle>{title}</CardTitle>
 				<CardDescription>{description}</CardDescription>
+
+				{status === "in-progress" && (
+					<CardAction>
+						<Badge variant="secondary">In progress</Badge>
+					</CardAction>
+				)}
 			</CardHeader>
 			<CardContent className={"flex flex-wrap gap-2"}>
 				{technologies.map((technology) => (

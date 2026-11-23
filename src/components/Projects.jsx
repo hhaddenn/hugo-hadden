@@ -59,6 +59,7 @@ function Projects() {
 							img={project.img}
 							title={project.title}
 							description={project.description}
+							status={project.status}
 							technologies={project.technologies}
 							github={project.github}
 							demo={project.demo}
