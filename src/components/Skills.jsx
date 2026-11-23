@@ -1,29 +1,29 @@
-import { Badge } from '@/components/ui/badge';
+import { Badge } from "@/components/ui/badge";
 
 function Skills() {
 	const skills = [
 		{
-			title: 'Frontend',
-			items: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
+			title: "Frontend",
+			items: ["React", "JavaScript", "Tailwind CSS", "Vite"],
 		},
 		{
-			title: 'Backend & APIs',
-			items: ['Python', 'Django', 'Django REST Framework', 'REST APIs'],
+			title: "Backend & APIs",
+			items: ["Python", "Django", "Django REST Framework", "REST APIs"],
 		},
 		{
-			title: 'Data & Background Tasks',
-			items: ['PostgreSQL', 'Redis', 'Celery'],
+			title: "Data & Background Tasks",
+			items: ["PostgreSQL", "Redis", "Celery"],
 		},
 		{
-			title: 'DevOps & Deployment',
-			items: ['Docker', 'Komodo', 'Git', 'GitHub Actions', 'CI/CD'],
+			title: "DevOps & Deployment",
+			items: ["Docker", "Komodo", "Git", "GitHub Actions", "CI/CD"],
 		},
 	];
 
 	return (
 		<section id="skills" className="py-24">
 			<div className="mx-auto max-w-6xl px-6">
-				<p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+				<p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
 					Skills
 				</p>
 
@@ -34,7 +34,9 @@ function Skills() {
 				<div className="mt-10 grid gap-8 md:grid-cols-3">
 					{skills.map((group) => (
 						<div key={group.title} className="border-t pt-5">
-							<h3 className="mb-4 text-lg font-semibold">{group.title}</h3>
+							<h3 className="mb-4 text-lg font-semibold">
+								{group.title}
+							</h3>
 
 							<div className="flex flex-wrap gap-2">
 								{group.items.map((skill) => (

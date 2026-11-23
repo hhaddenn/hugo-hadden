@@ -1,16 +1,16 @@
-import { Button } from '@/components/ui/button';
-import profilePic from '@/assets/profile_pic.jpeg';
+import { Button } from "@/components/ui/button";
+import profilePic from "@/assets/profile_pic.jpeg";
 
 function Hero() {
 	return (
 		<section>
-			<div className="grid min-h-[calc(100vh-64px)] grid-cols-1 items-center gap-12 mx-auto max-w-6xl px-6 lg:grid-cols-2">
+			<div className="mx-auto grid min-h-[calc(100vh-64px)] max-w-6xl grid-cols-1 items-center gap-12 px-6 lg:grid-cols-2">
 				<div className="max-w-3xl">
-					<p className="text-sm font-medium uppercase tracking-[0.2em] text-muted-foreground">
+					<p className="text-sm font-medium tracking-[0.2em] text-muted-foreground uppercase">
 						Software Developer · Portugal
 					</p>
 
-					<h1 className="text-5xl lg:text-7xl font-bold tracking-tight">
+					<h1 className="text-5xl font-bold tracking-tight lg:text-7xl">
 						Hi, I'm Hugo.
 					</h1>
 
@@ -28,7 +28,7 @@ function Hero() {
 						</Button>
 					</div>
 				</div>
-				<div className="flex justify-left lg:justify-end">
+				<div className="justify-left flex lg:justify-end">
 					<img
 						src={profilePic}
 						alt="Hugo Hadden"

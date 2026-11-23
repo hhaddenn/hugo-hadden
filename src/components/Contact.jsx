@@ -1,26 +1,26 @@
 function Contact() {
 	const contacts = [
 		{
-			name: 'Email',
-			value: 'hugohaddenn@gmail.com',
-			link: 'mailto:hugohaddenn@gmail.com',
+			name: "Email",
+			value: "hugohaddenn@gmail.com",
+			link: "mailto:hugohaddenn@gmail.com",
 		},
 		{
-			name: 'GitHub',
-			value: 'hhaddenn',
-			link: 'https://github.com/hhaddenn',
+			name: "GitHub",
+			value: "hhaddenn",
+			link: "https://github.com/hhaddenn",
 		},
 		{
-			name: 'LinkedIn',
-			value: 'Hugo Hadden',
-			link: 'https://www.linkedin.com/in/hugoahadden/',
+			name: "LinkedIn",
+			value: "Hugo Hadden",
+			link: "https://www.linkedin.com/in/hugoahadden/",
 		},
 	];
 
 	return (
 		<section id="contact">
 			<div className="mx-auto max-w-6xl px-6">
-				<p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+				<p className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
 					Contact
 				</p>
 				<h2 className="max-w-xs text-4xl font-bold tracking-tight">
@@ -34,7 +34,8 @@ function Contact() {
 						<a
 							key={contact.name}
 							href={contact.link}
-							className="block border-b py-4">
+							className="block border-b py-4"
+						>
 							<span className="block text-sm text-muted-foreground">
 								{contact.name}
 							</span>

@@ -5,27 +5,31 @@ import {
 	CardDescription,
 	CardContent,
 	CardFooter,
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 function ProjectCard({ img, title, description, technologies, github, demo }) {
 	return (
-		<Card className={'flex flex-col gap-4'}>
-			<img src={img} alt={title} className="aspect-video object-cover w-full" />
+		<Card className={"flex flex-col gap-4"}>
+			<img
+				src={img}
+				alt={title}
+				className="aspect-video w-full object-cover"
+			/>
 
 			<CardHeader>
 				<CardTitle>{title}</CardTitle>
 				<CardDescription>{description}</CardDescription>
 			</CardHeader>
-			<CardContent className={'flex flex-wrap gap-2'}>
+			<CardContent className={"flex flex-wrap gap-2"}>
 				{technologies.map((technology) => (
 					<Badge key={technology} variant="outline">
 						{technology}
 					</Badge>
 				))}
 			</CardContent>
-			<CardFooter className={'mt-auto flex gap-2'}>
+			<CardFooter className={"mt-auto flex gap-2"}>
 				{github && (
 					<Button asChild>
 						<a href={github}>Github</a>
